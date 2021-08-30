@@ -98,7 +98,6 @@ class Order:
                     break
                 else:
                     print("￥{:,}円不足しています。再度入力してください".format(self.change_money))
-
             print("お買い上げありがとうございました！")
 
     def write_receipt(self, text):
@@ -109,7 +108,7 @@ class Order:
             f.write(text + "\n")
 
 
-# マスタ登録(課題３)
+# マスタ登録
 def add_item_master_by_csv(csv_path):
     print("------- マスタ登録開始 ---------")
     item_master = []
@@ -143,7 +142,6 @@ def main():
     order = Order(item_master)
     # オーダー入力
     order.input_order()
-
     # オーダー番号から商品情報を取得する
     order.view_order()
     order.input_and_change_money()
