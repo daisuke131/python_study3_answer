@@ -1,2 +1,1 @@
-# python_study2_answer
-模範解答
+# class課題模範
