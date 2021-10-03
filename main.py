@@ -19,9 +19,6 @@ class Item:
         self.item_name = item_name
         self.price = price
 
-    def get_price(self):
-        return self.price
-
 
 # オーダークラス
 class Order:
@@ -54,11 +51,11 @@ class Order:
             if int(buy_item_code) != 0:
                 check = self.get_item_data(buy_item_code)
                 if check:
-                    print("{} が登録されました".format(check[0]))
+                    print(f"{check[0]}が登録されました")
                     buy_item_count = input("個数を入力してください >>> ")
                     self.add_item_order(buy_item_code, buy_item_count)
                 else:
-                    print("「{}」は商品マスタに存在しません".format(buy_item_code))
+                    print(f"「{buy_item_code}」は商品マスタに存在しません")
             else:
                 print("商品登録を終了します。")
                 break
